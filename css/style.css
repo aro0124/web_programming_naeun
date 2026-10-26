@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* 전체 화면 */
+.scene {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 하늘 배경 */
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("../img/Background_sky.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* --------------------
+    뒤쪽 산
+-------------------- */
+
+.mountain {
+    position: absolute;
+}
+
+.mountain-left {
+    width: 28%;
+    left: 0;
+    top: 8%;
+}
+
+.mountain-right {
+    width: 28%;
+    right: 0;
+    top: 8%;
+}
+
+
+/* --------------------
+    달 / 해
+-------------------- */
+
+.moon {
+    position: absolute;
+    width: 5%;
+    left: 22%;
+    top: 9%;
+}
+
+.sun {
+    position: absolute;
+    width: 5%;
+    right: 21%;
+    top: 9%;
+}
+
+
+/* --------------------
+    산 + 나무 + 안개
+-------------------- */
+
+.mountain-fog {
+    position: absolute;
+}
+
+.mountain-fog-left {
+    width: 34%;
+    left: 0;
+    top: 20%;
+}
+
+.mountain-fog-right {
+    width: 34%;
+    right: 0;
+    top: 20%;
+}
+
+
+/* --------------------
+    앞쪽 구름 장식
+-------------------- */
+
+.fog {
+    position: absolute;
+}
+
+.fog-left {
+    width: 25%;
+    left: 0;
+    bottom: 10%;
+}
+
+.fog-right {
+    width: 23%;
+    right: 0;
+    bottom: 10%;
+}
+
+
+/* 캐릭터가 배치될 공간 */
+.character {
+    position: absolute;
+}
+
+.character img {
+    width: 100%;
+}
+
+/* 1. Burning - 그대로 */
+.character1 {
+    width: 12%;
+    left: 21%;
+    top: 30%;
+    z-index: 3;
+}
+
+/* 2. Dark - 그대로 */
+.character2 {
+    width: 20%;
+    right: 14%;
+    top: 38%;
+    z-index: 4;
+}
+
+/* 3. Eternal - 그대로 */
+.character3 {
+    width: 15%;
+    left: 23%;
+    top: 58%;
+    z-index: 5;
+}
+
+/* 4. Gold - 그대로 */
+.character4 {
+    width: 15%;
+    right: 27%;
+    top: 31%;
+    z-index: 3;
+}
+
+
+/* 5. Holy → 기존 Silent 자리 */
+.character5 {
+    width: 11%;
+    right: 30%;
+    top: 60%;
+    z-index: 5;
+}
+
+
+/* 6. Mistic → 기존 Holy 자리 */
+.character6 {
+    width: 12%;
+    left: 14%;
+    top: 42%;
+    z-index: 3;
+}
+
+
+/* 7. Pure → 기존 Mistic 자리 */
+.character7 {
+    width: 20%;
+    left: 38%;
+    top: 24%;
+    z-index: 2;
+}
+
+
+/* 8. Saint → 기존 Pure 자리 */
+.character8 {
+    width: 19%;
+    left: 51%;
+    top: 42%;
+    z-index: 4;
+}
+
+
+/* 9. Shadow → 기존 Saint 자리 */
+.character9 {
+    width: 17%;
+    left: 40%;
+    top: 52%;
+    z-index: 6;
+}
+
+
+/* 10. Silent → 기존 Shadow 자리 */
+.character10 {
+    width: 17%;
+    left: 29%;
+    top: 38%;
+    z-index: 4;
+}
+
+/* 소울잼 */
+.gem {
+    position: absolute;
+    z-index: 6;
+}
+
+/* Burning 잼 */
+.gem1 {
+    width: 10%;
+    left: 22%;
+    top: 36%;
+}
+
+/* Dark 잼 */
+.gem2 {
+    width: 7%;
+    right: 22%;
+    top: 50%;
+}
+
+/* Eternal 잼 */
+.gem3 {
+    width: 7%;
+    left: 27%;
+    top: 66%;
+}
+
+/* Gold 잼 */
+.gem4 {
+    width: 10%;
+    right: 30%;
+    top: 36%;
+}
+
+/* Holy 잼 */
+.gem5 {
+    width: 8%;
+    right: 30%;
+    top: 67%;
+}
+
+/* Mistic 잼 */
+.gem6 {
+    width: 6%;
+    left: 17%;
+    top: 48%;
+}
+
+/* Pure 잼 */
+.gem7 {
+    width: 8%;
+    left: 45%;
+    top: 34%;
+}
+
+/* Saint 잼 */
+.gem8 {
+    width: 7.5%;
+    left: 54%;
+    top: 50%;
+}
+
+/* Shadow 잼 */
+.gem9 {
+    width: 9%;
+    left: 44%;
+    top: 65%;
+}
+
+/* Silent 잼 */
+.gem10 {
+    width: 8%;
+    left: 33%;
+    top: 47%;
+}
+
+/* 가장 앞쪽 긴 구름 */
+.fog-front {
+    position: absolute;
+    width: 50%;
+    left: 26%;
+    bottom: -5%;
+    z-index: 7;
+}
+
+/* 제목과 행사 정보 */
+.event-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+    transition: opacity 2.5s;
+
+    z-index: 5;
+}
+
+.event-info.show {
+    opacity: 1;
+}
+
+/* 제목 - 상단 중앙 */
+.event-title {
+    position: absolute;
+    width: 480px;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+}
+
+/* 시간 - 하단 왼쪽 */
+.event-time {
+    position: absolute;
+    width: 250px;
+    left: 5%;
+    bottom: 5%;
+}
+
+/* 장소 - 하단 오른쪽 */
+.event-place {
+    position: absolute;
+    width: 350px;
+    right: 5%;
+    bottom: 5%; 
+}
+
+/* 처음에는 쿠키를 숨김 */
+.cookie {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2.5s;
+}
+
+/* 젬도 서서히 사라지도록 설정 */
+.gem {
+    position: absolute;
+    z-index: 6;
+    transition: opacity 2.5s;
+}
+
+/* 쿠키가 나타날 때 */
+.cookie.show {
+    opacity: 1;
+}
+
+/* 젬이 사라질 때 */
+.gem.hide {
+    opacity: 0;
+}
+
+/* 모든 쿠키가 등장하면 제목과 정보 표시 */
+.event-info.show {
+    opacity: 1;
+}
+
+/* ========================================
+   배경 요소 + 소울잼 움직임
+======================================== */
+
+
+/* 배경 요소 - 아주 살짝 위아래로 움직임 */
+@keyframes backgroundFloating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* 달 / 해 */
+.moon,
+.sun {
+    animation: backgroundFloating 6s infinite;
+}
+
+
+/* 산 + 안개 */
+.mountain-fog {
+    animation: backgroundFloating 7s infinite;
+}
+
+
+/* 좌우 앞쪽 장식 */
+.fog-left,
+.fog-right {
+    animation: backgroundFloating 6s infinite;
+}
+
+
+/* 가장 앞쪽 긴 구름 */
+.fog-front {
+    animation: backgroundFloating 8s infinite;
+}
+
+
+
+/* ========================================
+   소울잼 움직임
+======================================== */
+
+
+/* 기본 젬 움직임 */
+@keyframes gemFloating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* 반대 방향 젬 움직임 */
+@keyframes gemFloatingReverse {
+
+    0% {
+        transform: translateY(-12px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* 각각 다른 속도로 움직이기 */
+
+.gem1 {
+    animation: gemFloating 3s infinite;
+}
+
+.gem2 {
+    animation: gemFloatingReverse 3.5s infinite;
+}
+
+.gem3 {
+    animation: gemFloating 4s infinite;
+}
+
+.gem4 {
+    animation: gemFloating 3.2s infinite;
+}
+
+.gem5 {
+    animation: gemFloatingReverse 3.8s infinite;
+}
+
+.gem6 {
+    animation: gemFloating 3.4s infinite;
+}
+
+.gem7 {
+    animation: gemFloating 4.2s infinite;
+}
+
+.gem8 {
+    animation: gemFloatingReverse 3.6s infinite;
+}
+
+.gem9 {
+    animation: gemFloating 4s infinite;
+}
+
+.gem10 {
+    animation: gemFloatingReverse 3.3s infinite;
+}
