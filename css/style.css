@@ -313,9 +313,12 @@ body {
 /* 제목 - 상단 중앙 */
 .event-title {
     position: absolute;
-    width: 480px;
-    left: 35%;
+    width: 500px;
     top: 8%;
+
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /* 시간 - 하단 왼쪽 */
