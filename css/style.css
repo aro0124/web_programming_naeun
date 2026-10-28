@@ -121,7 +121,7 @@ body {
     width: 100%;
 }
 
-/* 1. Burning - 그대로 */
+/* 1. Burning */
 .character1 {
     width: 12%;
     left: 21%;
@@ -129,7 +129,7 @@ body {
     z-index: 3;
 }
 
-/* 2. Dark - 그대로 */
+/* 2. Dark */
 .character2 {
     width: 20%;
     right: 14%;
@@ -137,7 +137,7 @@ body {
     z-index: 4;
 }
 
-/* 3. Eternal - 그대로 */
+/* 3. Eternal */
 .character3 {
     width: 15%;
     left: 23%;
@@ -145,7 +145,7 @@ body {
     z-index: 5;
 }
 
-/* 4. Gold - 그대로 */
+/* 4. Gold */
 .character4 {
     width: 15%;
     right: 27%;
@@ -154,7 +154,7 @@ body {
 }
 
 
-/* 5. Holy → 기존 Silent 자리 */
+/* 5. Holy */
 .character5 {
     width: 11%;
     right: 30%;
@@ -163,7 +163,7 @@ body {
 }
 
 
-/* 6. Mistic → 기존 Holy 자리 */
+/* 6. Mistic */
 .character6 {
     width: 12%;
     left: 14%;
@@ -172,7 +172,7 @@ body {
 }
 
 
-/* 7. Pure → 기존 Mistic 자리 */
+/* 7. Pure */
 .character7 {
     width: 20%;
     left: 38%;
@@ -181,7 +181,7 @@ body {
 }
 
 
-/* 8. Saint → 기존 Pure 자리 */
+/* 8. Saint */
 .character8 {
     width: 19%;
     left: 51%;
@@ -190,7 +190,7 @@ body {
 }
 
 
-/* 9. Shadow → 기존 Saint 자리 */
+/* 9. Shadow */
 .character9 {
     width: 17%;
     left: 40%;
@@ -199,7 +199,7 @@ body {
 }
 
 
-/* 10. Silent → 기존 Shadow 자리 */
+/* 10. Silent */
 .character10 {
     width: 17%;
     left: 29%;
@@ -314,9 +314,8 @@ body {
 .event-title {
     position: absolute;
     width: 480px;
-    left: 50%;
+    left: 37%;
     top: 8%;
-    transform: translateX(-50%);
 }
 
 /* 시간 - 하단 왼쪽 */
